@@ -1,0 +1,28 @@
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Preparando café da manhã...");
+        FazerCafe();
+        TorrarPao();
+        Console.WriteLine("Café da manhã pronto!");
+    }
+    static void FazerCafe()
+    {
+        Console.WriteLine("Fazendo café...");
+        Thread.Sleep(3000);
+        Console.WriteLine("Café pronto.");
+    }
+    static void TorrarPao()
+    {
+        Console.WriteLine("Torrando pão...");
+        Thread.Sleep(5000);
+        Console.WriteLine("Pão torrado.");
+    }
+    static void FritarBacon()
+    {
+        Console.WriteLine("Torrando pão...");
+        Thread.Sleep(5000);
+        Console.WriteLine("Pão torrado.");
+    }
+}
