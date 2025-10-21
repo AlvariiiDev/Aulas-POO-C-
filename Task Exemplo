@@ -1,0 +1,18 @@
+class Program
+{
+    static async Task Main()
+    {
+        Console.WriteLine("Carregando sistema...");
+        int totalSteps = 20;
+        for (int i = 0; i <= totalSteps; i++)
+        {
+            int percent = (i * 100) / totalSteps;
+            int hashes = (i * 20) / totalSteps;
+            string bar = "[" + new string('#', hashes) + new string(' ', 20 - hashes) + $"] {percent}%";
+            Console.Write("\r" + bar);
+            await Task.Delay(150);
+        }
+        Console.WriteLine();
+        Console.WriteLine("Carregado com sucesso!");
+    }
+}
