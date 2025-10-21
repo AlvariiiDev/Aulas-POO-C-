@@ -1,0 +1,14 @@
+class Program
+{
+    static async Task Main()
+    {
+        Task<int> task = Task.Run(() =>
+        {
+            Thread.Sleep(2000);
+            return 42;
+        });
+        Console.WriteLine("Continua enquanto a Task é executada.");
+        int result = await task;
+        Console.WriteLine($"Resultado da Task: {result}");
+    }
+}
