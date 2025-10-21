@@ -1,0 +1,23 @@
+class Program
+{
+    static async Task Main()
+    {
+        Console.WriteLine("Preparando café da manhã...");
+        Task fazerCafe = FazerCafe();
+        Task torrarPao = TorrarPao();
+        await Task.WhenAll(fazerCafe, torrarPao);
+        Console.WriteLine("Café da manhã pronto!");
+    }
+    static async Task FazerCafe()
+    {
+        Console.WriteLine("Fazendo café...");
+        await Task.Delay(3000);
+        Console.WriteLine("Café pronto.");
+    }
+    static async Task TorrarPao()
+    {
+        Console.WriteLine("Torrando pão...");
+        await Task.Delay(5000);
+        Console.WriteLine("Pão torrado.");
+    }
+}
