@@ -1,0 +1,20 @@
+namespace TarefaDemorada
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        private async Task TarefaDemorada()
+        {
+            Task.Delay(3000);
+            this.Text = "Tarefa concluida";
+           
+        }
+        private async void button1_Click(object sender, EventArgs e)
+        {
+           await TarefaDemorada();
+        }
+    }
+}
