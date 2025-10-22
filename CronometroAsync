@@ -1,0 +1,23 @@
+namespace Cronometro
+{
+    internal class Program
+    {
+        static async Task CronometroAsync(int segundos)
+        {
+
+            for (int i = 0; i <= segundos; i++)
+            {
+
+                Console.WriteLine(i);
+                await Task.Delay(1000);
+
+
+            }
+
+        }
+        static async Task Main(string[] args)
+        {
+            await CronometroAsync(10);
+        }
+    }
+}
